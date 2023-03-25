@@ -116,26 +116,26 @@ public class ApiUtil {
      *
      * @return 世界新闻
      */
-    public static String getWorldRead60s(){
-        String result = HttpUtil.get(WorldRead60sApi);
-        logger.info(String.format("获取世界新闻 %s", result));
-        Result re = JSONUtil.toBean(result, Result.class);
-        WorldRead60s worldRead60s = JSONUtil.toBean(re.getData(), WorldRead60s.class);
-        List<String> news = worldRead60s.getNews();
-        StringBuilder message = new StringBuilder();
-        int i = 0;
-        if(CollUtil.isNotEmpty(news)){
-            message.append("新闻").append("\n");
-            for(String dto : news){
-                i++;
-                message.append(dto).append("\n");
-                if(i >= 5){
-                    break;
-                }
-            }
-        }
-        return message.toString();
-    }
+//    public static String getWorldRead60s(){
+//        String result = HttpUtil.get(WorldRead60sApi);
+//        logger.info(String.format("获取世界新闻 %s", result));
+//        Result re = JSONUtil.toBean(result, Result.class);
+//        WorldRead60s worldRead60s = JSONUtil.toBean(re.getData(), WorldRead60s.class);
+//        List<String> news = worldRead60s.getNews();
+//        StringBuilder message = new StringBuilder();
+//        int i = 0;
+//        if(CollUtil.isNotEmpty(news)){
+//            message.append("新闻").append("\n");
+//            for(String dto : news){
+//                i++;
+//                message.append(dto).append("\n");
+//                if(i >= 5){
+//                    break;
+//                }
+//            }
+//        }
+//        return message.toString();
+//    }
 
 
     public static String getMiYu(){
