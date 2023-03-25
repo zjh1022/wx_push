@@ -78,7 +78,7 @@ public class AllConfig {
         //new BirthDay()里面代表[年]、[月]、[日]、[是否是农历(true为农历、false为公历)]、[是否统计天数(true为统计，false为倒计时)]、[倒计时到0天提示信息(如果类型为统计可以不填)]
         userList.add(getUser(
                 "odxiA55UUkGiniFpzbISch3akA2w", //扫码关注你的测试号以后，测试平台会出现TA的微信号
-                "0Tmu6OmPnWUUhmqqXVCVhYQ3ZHZ1s6yCbS7gQaK9XKY", //要给这个人发送的模板ID
+                "BR07FXgWLJ6MwKcjr1PdHkurI-80SS7yNCvyMLZws_E", //要给这个人发送的模板ID
                 "郑江海", //咋称呼这个人
                 "广东省深圳市", //这个人的详细地址
                 "深圳", //这个人在的城市
@@ -89,11 +89,11 @@ public class AllConfig {
         ));
 
         userList.add(getUser(
-                "这个人扫码后的微信号",//扫码关注你的测试号以后，测试平台会出现TA的微信号
-                "微信消息模板ID",//要给这个人发送的模板ID
-                "这个人的称呼",//咋称呼这个人
-                "江苏省南京市玄武区",//这个人的详细地址
-                "南京",//这个人在的城市
+                "odxiA50OabzeZbdjTH_NtU0XgnVQ",//扫码关注你的测试号以后，测试平台会出现TA的微信号
+                "BR07FXgWLJ6MwKcjr1PdHkurI-80SS7yNCvyMLZws_E",//要给这个人发送的模板ID
+                "师帅",//咋称呼这个人
+                "北京市",//这个人的详细地址
+                "北京",//这个人在的城市
                 new BirthDay(1999,8,11,false,false,"生日快乐哦~~"),
                 new BirthDay(1999,2,15,true,false,"pt生日快乐！！"),
                 new BirthDay(2020,7,8,true,true),
