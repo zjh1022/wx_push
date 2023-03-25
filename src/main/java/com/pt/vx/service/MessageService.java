@@ -63,7 +63,6 @@ public class MessageService {
                 CompletableFuture<Void> setQinghua = CompletableFuture.runAsync(()->  setQinghua(map),POOL);
                 CompletableFuture<Void> setDongman =CompletableFuture.runAsync(()->  setDongman(map),POOL);
                 CompletableFuture<Void> setTiangou = CompletableFuture.runAsync(()->  setTiangou(map),POOL);
-                CompletableFuture<Void> setWorldRead = CompletableFuture.runAsync(()->  setWorldRead(map),POOL);
                 CompletableFuture<Void> setRandomRead = CompletableFuture.runAsync(()->  setRandomRead(map),POOL);
                 CompletableFuture<Void> setWoZaiRenJian =  CompletableFuture.runAsync(()->  setWoZaiRenJian(map),POOL);
                 CompletableFuture<Void> setPoetry = CompletableFuture.runAsync(()->  setPoetry(map),POOL);
@@ -77,7 +76,6 @@ public class MessageService {
                         setQinghua,
                         setDongman,
                         setTiangou,
-                        setWorldRead,
                         setRandomRead,
                         setWoZaiRenJian,
                         setPoetry,
@@ -190,8 +188,6 @@ public class MessageService {
            randomInfo = ApiUtil.getDongman();
        }else if(i == 3 && AllConfig.open_tiangou.isOpen()){
            randomInfo = ApiUtil.getTgrj();
-       }else if(i == 4 && AllConfig.open_world_read.isOpen()){
-           randomInfo = ApiUtil.getWorldRead60s();
        }else if(i == 5 && AllConfig.open_random_read.isOpen()){
            randomInfo = ApiUtil.getRandomRead();
        }else if(i == 6 && AllConfig.open_wozairenjian.isOpen()){
@@ -232,10 +228,7 @@ public class MessageService {
         setMap(map, KeyConfig.KEY_RANDOM_READ, AllConfig.open_random_read, ApiUtil::getRandomRead);
     }
 
-    private void setWorldRead(HashMap<String, DataInfo> map) {
 
-        setMap(map, KeyConfig.KEY_WORLD_READ, AllConfig.open_world_read, ApiUtil::getWorldRead60s);
-    }
 
     private void setTiangou(HashMap<String, DataInfo> map) {
 
